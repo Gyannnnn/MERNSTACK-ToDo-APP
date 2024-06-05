@@ -1,0 +1,27 @@
+.nav{
+    height: 50px;
+    width: 100vw;
+    background: #031CA6;
+    color: #ffffffb9;
+    position: fixed;
+    top: 0;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav h1{
+    font-size: 2vw;
+}
+@media(max-width:719px){
+    .nav h1{
+        font-size: 3vw;
+    }
+
+}
+@media(max-width:394px){
+    .nav h1{
+        font-size: 4vw;
+    }
+
+}

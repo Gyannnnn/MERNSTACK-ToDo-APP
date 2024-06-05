@@ -1,0 +1,94 @@
+input{    
+    padding: 10px;
+    width: 350px;
+    background: transparent;
+    border: 1px solid #fff;    
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: #fff;
+
+}
+button{
+    border: 0.2px solid #fff;
+    background: blue;    
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #ffffffcf;
+    cursor: pointer;
+}
+button h4{
+    color: #fff;
+    font-size: 1vw;
+}
+button:hover{
+    background: rgba(0, 0, 255, 0.45);
+
+}
+.create{    
+    margin-top: 50px;
+    width: 50%;
+    display: flex;
+    justify-content:center;
+    margin-bottom: 100px;
+    gap: 20px;
+    
+}
+@media(max-width:1121px){
+    .button{
+        font-size: 1vw;
+    }
+    .create{
+        margin-top: 150px;       
+        width: 60%;
+    }
+
+}
+@media(max-width:935px){
+    .create{  
+        margin-top: 150px;       
+       
+        width: 100%;
+    }
+    button h4{
+        
+        font-size: 1.5vw;
+    }
+    
+    
+  
+
+}
+@media(max-width:561px){
+    input{
+        width: 200px;
+    }
+    button{
+        padding: 0px 30px;        
+        font-size: 2.5vw;
+        border: 0.1px solid #fff;
+    }
+    button h4{
+        
+        font-size: 2vw;
+    }
+
+}
+@media(max-width:394px){
+    input{
+        width: 150px;
+    }
+    button{
+        padding: 1px 30px;
+
+    }
+    button h4{
+        color: #fff;
+        font-size: 2.5vw;
+    }
+    .create{
+        gap: 10px;
+    }
+
+}
