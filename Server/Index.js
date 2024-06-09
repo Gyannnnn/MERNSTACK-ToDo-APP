@@ -1,45 +1,42 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const todoModel = require('./Models/Todo');
+const todoModel = require('./models/Todo');
 
 const app = express();
-app.use(cors(
-    {
-        origin: ["https://mernstack-to-do-app-frontend.vercel.app/"],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
-));
+
+app.use(cors({
+    origin: ["https://mernstack-to-do-app-frontend.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true
+}));
+
 app.use(express.json());
 
 mongoose.connect('mongodb://127.0.0.1:27017/test', {
     useNewUrlParser: true,
     useUnifiedTopology: true
-})
-    
-.then(() => {
+}).then(() => {
     console.log("Connected to MongoDB");
-})
-.catch((err) => {
+}).catch((err) => {
     console.error("Error connecting to MongoDB:", err);
 });
 
 app.get("/", (req, res) => {
     res.json("Working fine");
-})
+});
 
 app.get('/get', (req, res) => {
     todoModel.find()
-    .then(result => res.json(result))
-    .catch(err => res.status(500).json(err));
+        .then(result => res.json(result))
+        .catch(err => res.status(500).json(err));
 });
 
 app.delete('/delete/:id', (req, res) => {
     const { id } = req.params;
     todoModel.findByIdAndDelete(id)
-    .then(result => res.json(result))
-    .catch(err => res.status(500).json(err));
+        .then(result => res.json(result))
+        .catch(err => res.status(500).json(err));
 });
 
 app.post('/add', async (req, res) => {
