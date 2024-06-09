@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Create from './Components/Create';
 import './App.css';
 import axios from 'axios';
-import { MdDeleteOutline } from "react-icons/md";
+import { MdDeleteOutline } from 'react-icons/md';
+
 import Nav from './Components/Nav';
 
 const Home = () => {
